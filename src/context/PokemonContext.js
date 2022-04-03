@@ -19,7 +19,7 @@ const PokemonProvider = (props) => {
   );
 
   const addDisLike = (pokemon) => dispatch({ type: DISLIKE_POKEMONS, pokemon });
-  const addFavorite = (pokemon) => () => dispatch({ type: CAPTURE, pokemon });
+  const addFavorite = (pokemon) => dispatch({ type: CAPTURE, pokemon });
   const removeFavorite = (pokemon) => () => dispatch({ type: RELEASE, pokemon });
   const addPokemon = (pokemon) => dispatch({ type: ADD_POKEMON, pokemon });
   const removePokemon = (pokemon) => dispatch({ type: DELETE_POKEMON, pokemon });

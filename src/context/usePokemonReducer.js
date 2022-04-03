@@ -33,7 +33,8 @@ const addFavoritePokemon = (pokemon, state) => ({
 
 const addPokemon = (pokemon, state) => ({
   pokemons: [...state.pokemons, pokemon],
-  favoritePokemons: state.favoritePokemons
+  favoritePokemons: state.favoritePokemons,
+  disLike: state.disLike
 });
 
 const addPokemons = (pokemons, state) => ({
@@ -59,10 +60,7 @@ const pokemonReducer = (state, action) => {
   console.log("Inside Dispatch Action :" + action.type);
   switch (action.type) {
     case CAPTURE:
-      {
-      console.log("Hello Inside CAPTURE :" + JSON.stringify(action.pokemon.name));
       return addFavoritePokemon(action.pokemon, state);
-      }
     case RELEASE:
       return releasePokemon(action.pokemon, state);
     case ADD_POKEMON:

@@ -30,7 +30,8 @@ const Home = () => {
   return (
       <div className="app-container">
         <div className="pokemon-container">
-          <div className="all-container">{<PokeRow pokeList={pokemons} buttonLabel="like" dislike={addDisLike} isFavorite={false} onClick1={addFavorite}/>}</div>
+          <div className="all-container">{<PokeRow pokeList={pokemons} buttonLabel="like" dislike={addDisLike} isFavorite={false}
+          onClick={addFavorite}/>}</div>
           <button className="load-more" onClick={() => getAllPokemons()}>
             More Pokemons
           </button>
